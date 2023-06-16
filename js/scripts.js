@@ -7,6 +7,14 @@ Order.prototype.addPizza = function (pizza) {
     this.pizzas.push(pizza);
 };
 
+Order.prototype.getTotalPrice = function () {
+    let totalOrderPrice = 0;
+    for (let i = 0; i < this.pizzas.length; i++) {
+        totalOrderPrice += this.pizzas[i].totalPizzaPrice();
+    }
+    return totalOrderPrice;
+};
+
 // Business Logic for Pizza()
 
 function Pizza(size, toppings) {
@@ -77,11 +85,39 @@ function getSelectedToppings() {
     return selectedToppings;
 }
 
+function displayOrderDetails(order) {
+    let orderOutput = document.getElementById("total-order");
+    orderOutput.innerHTML = "";
+
+    for (let i = 0; i < order.pizzas.length; i++) {
+        let orderItem = order.pizzas[i];
+        let orderDiv = document.createElement("div");
+        orderDiv.setAttribute("class", "order-div");
+
+        let OrderTitle = document.createElement("h3");
+        OrderTitle.innerHTML = "Order " + (i + 1);
+        orderDiv.append(OrderTitle);
+
+        let orderDetails = document.createElement("p");
+        orderDetails.innerHTML = "Size: " + orderItem.size + "<br>" + "Toppings: " + orderItem.toppings.join(" + ") + "<br>" + "Price: $" + orderItem.totalPizzaPrice();
+        orderDiv.append(orderDetails);
+
+        orderOutput.append(orderDiv);
+    }
+    let orderTotal = document.createElement("p");
+    orderTotal.innerHTML = "Total: $" + order.getTotalPrice();
+    orderOutput.append(orderTotal);
+};
+
+
 function handleOrderFormSubmission(event) {
     event.preventDefault();
 
     let selectedToppings = getSelectedToppings();
     let pizza = new Pizza(document.querySelector("#size").value, selectedToppings);
+    let order = new Order(pizza);
+    order.addPizza(pizza);
+
     let totalPizzaPrice = pizza.totalPizzaPrice();
     let totalOutput = document.getElementById("total-output");
     let sizeOutput = document.getElementById("size-output");
@@ -97,6 +133,8 @@ function handleOrderFormSubmission(event) {
     document.getElementById("order").setAttribute("class", "hidden");
     document.getElementById("receipt-button").removeAttribute("class");
     document.getElementById("go-back").removeAttribute("class");
+
+    displayOrderDetails(order);
 }
 
 function handleReceiptButtonClick(event) {
