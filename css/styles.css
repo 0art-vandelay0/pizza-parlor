@@ -12,8 +12,8 @@ body {
 
 .thank-you {
     text-align: center;
-    font-size: 30px;
-    margin: 40px;
+    font-size: 20px;
+    margin: 35px;
     margin-top: 100px;
     font-weight: bold;
 }
@@ -31,6 +31,16 @@ h2 {
 h3 {
     font-size: 24px;
     margin: 10px;
+}
+
+#summary-h3 {
+    border: 1px solid #984183;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #b9aab0;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #682a59;
 }
 
 h4 {
@@ -73,6 +83,21 @@ select {
     margin-right: auto;
     padding: 20px;
     max-width: 500px;
+}
+
+#order-output {
+    border-radius: 30px;
+    text-align: center;
+    width: 80%;
+    background-color: rgb(52, 52, 52);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+}
+
+#bottom-buttons {
+    text-align: center;
 }
 
 button {
