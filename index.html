@@ -10,7 +10,47 @@
 </head>
 
 <body>
-
+    <h1>Pizza Parlor</h1>
+    <h2>Order Form</h2>
+    <p>Select a size and as many toppings as you want.</p>
+    <div id="size-menu">
+        <ul>
+            <li>Small: 12"</li>
+            <li>Medium: 14"</li>
+            <li>Large: 16"</li>
+            <li>Extra Large: 18"</li>
+        </ul>
+    </div>
+    <div id="form-div">
+        <form id="order-form">
+            <h3>Size:</h3>
+            <div id="size-div">
+                <select id="size" required></select>
+            </div>
+            <br>
+            <h3>Toppings:</h3>
+            <div id="toppings">
+                <div id="meats">
+                    <label for="meats">Meats:</label><br>
+                    <input type="checkbox" name="topping" value="Pepperoni">Pepperoni<br>
+                    <input type="checkbox" name="topping" value="Bacon">Canadian Bacon<br>
+                    <input type="checkbox" name="topping" value="Sausage">Sausage<br>
+                </div>
+                <div id="veggies">
+                    <label for="veggies">Meats:</label><br>
+                    <input type="checkbox" name="topping" value="Mushrooms">Mushrooms<br>
+                    <input type="checkbox" name="topping" value="Olives">Olives<br>
+                    <input type="checkbox" name="topping" value="Onions">Onions<br>
+                    <input type="checkbox" name="topping" value="Green Peppers">Green Peppers<br>
+                </div>
+                <div id="other">
+                    <label for="meats">Other Toppings:</label><br>
+                    <input type="checkbox" name="topping" value="Pineapple">Pineapple<br>
+                    <input type="checkbox" name="topping" value="Spinach">Extra Cheese<br>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>

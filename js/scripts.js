@@ -59,7 +59,7 @@ Pizza.prototype.totalPizzaPrice = function() {
 // UI Logic
 
 window.addEventListener("load", function() {
-    document.querySelector("#pizza-form").onsubmit = function(event) {
-    event.preventDefault();
-    };
+    document.querySelector("#pizza-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+    });
 });
