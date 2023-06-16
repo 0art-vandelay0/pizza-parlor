@@ -20,7 +20,7 @@
 
 Enter the size of pizza you want along with any and all toppings you want to add. Click the "Submit Order" button and your order details will appear on the screen. If you want to change your order, click "Adjust Order" or click "Checkout" to checkout with your current total and pizza of choice.
 
-## **Setup/Installation Requirements**
+## **Setup/Installation Requirements** &#x1F4BB;
 
 ### **In VS Code**
 
@@ -37,7 +37,7 @@ Enter the size of pizza you want along with any and all toppings you want to add
 
 ## **Known Bugs**
 
-- No known bugs :beetle:
+- No known bugs &#x1F997;
 
 ## **Test Cases**
 
@@ -108,9 +108,9 @@ Enter the size of pizza you want along with any and all toppings you want to add
 
 Please contact caseyfhill1@gmail.com with any the following:
 
-- Found bugs :lady_beetle:
+- Found bugs &#x1F41E
 - Alterations and improvements
 - General Questions
-- Any contributions you would like to make! :old_key:
+- Any contributions you would like to make! &#x1F5DD;
 
 Copyright (c) 06/16/2023 Casey Hill
