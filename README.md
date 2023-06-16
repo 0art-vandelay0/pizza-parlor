@@ -104,21 +104,6 @@ Enter the size of pizza you want along with any and all toppings you want to add
    &nbsp;&nbsp;&nbsp;20<br>
    &nbsp;&nbsp;&nbsp;23<br>
 
-### Describe Order.prototype.addPizza()
-
-1. **Test** _"It will add Pizza objects to the pizza array"_<br>
-   **Code:**<br>
-   &nbsp;&nbsp;&nbsp;let pizza1 = new Pizza("medium", ["extra cheese", "pepperoni"]);<br>
-   &nbsp;&nbsp;&nbsp;let pizza2 = new Pizza("medium", ["extra cheese", "pepperoni", "sausage"]);<br>
-   &nbsp;&nbsp;&nbsp;let order1 = new Order();<br>
-   &nbsp;&nbsp;&nbsp;order1.addPizza(pizza1)<br>
-   &nbsp;&nbsp;&nbsp;order1.addPizza(pizza2)<br>
-   &nbsp;&nbsp;&nbsp;console.log(order1);<br>
-   **Expected Output:**<br>
-   &nbsp;&nbsp;&nbsp;Order {pizzas: Array(2)}<br>
-   &nbsp;&nbsp;&nbsp;pizzas: (2) [Pizza, Pizza]<br>
-   &nbsp;&nbsp;&nbsp;[[Prototype]]: Object<br>
-
 ## License
 
 Please contact caseyfhill1@gmail.com with any the following:
