@@ -85,29 +85,29 @@ function getSelectedToppings() {
     return selectedToppings;
 }
 
-function displayOrderDetails(order) {
-    let orderOutput = document.getElementById("total-order");
-    orderOutput.innerHTML = "";
+// function displayOrderDetails(order) {
+//     let orderOutput = document.getElementById("total-order");
+//     orderOutput.innerHTML = "";
 
-    for (let i = 0; i < order.pizzas.length; i++) {
-        let orderItem = order.pizzas[i];
-        let orderDiv = document.createElement("div");
-        orderDiv.setAttribute("class", "order-div");
+//     for (let i = 0; i < order.pizzas.length; i++) {
+//         let orderItem = order.pizzas[i];
+//         let orderDiv = document.createElement("div");
+//         orderDiv.setAttribute("class", "order-div");
 
-        let OrderTitle = document.createElement("h3");
-        OrderTitle.innerHTML = "Order " + (i + 1);
-        orderDiv.append(OrderTitle);
+//         let OrderTitle = document.createElement("h3");
+//         OrderTitle.innerHTML = "Order " + (i + 1);
+//         orderDiv.append(OrderTitle);
 
-        let orderDetails = document.createElement("p");
-        orderDetails.innerHTML = "Size: " + orderItem.size + "<br>" + "Toppings: " + orderItem.toppings.join(" + ") + "<br>" + "Price: $" + orderItem.totalPizzaPrice();
-        orderDiv.append(orderDetails);
+//         let orderDetails = document.createElement("p");
+//         orderDetails.innerHTML = "Size: " + orderItem.size + "<br>" + "Toppings: " + orderItem.toppings.join(" + ") + "<br>" + "Price: $" + orderItem.totalPizzaPrice();
+//         orderDiv.append(orderDetails);
 
-        orderOutput.append(orderDiv);
-    }
-    let orderTotal = document.createElement("p");
-    orderTotal.innerHTML = "Total: $" + order.getTotalPrice();
-    orderOutput.append(orderTotal);
-};
+//         orderOutput.append(orderDiv);
+//     }
+//     let orderTotal = document.createElement("p");
+//     orderTotal.innerHTML = "Total: $" + order.getTotalPrice();
+//     orderOutput.append(orderTotal);
+// };
 
 
 function handleOrderFormSubmission(event) {
@@ -134,7 +134,7 @@ function handleOrderFormSubmission(event) {
     document.getElementById("receipt-button").removeAttribute("class");
     document.getElementById("go-back").removeAttribute("class");
 
-    displayOrderDetails(order);
+    // displayOrderDetails(order);
 }
 
 function handleReceiptButtonClick(event) {
@@ -155,10 +155,23 @@ function unhideOrderForm() {
     document.getElementById("go-back").setAttribute("class", "hidden");
 }
 
+// function handleAddPizzaButtonClick(event) {
+//     event.preventDefault();
+
+//     document.getElementById("order-form").reset();
+
+//     document.getElementById("total-output").innerHTML = "";
+//     document.getElementById("size-output").innerHTML = "";
+//     document.getElementById("toppings-output").innerHTML = "";
+
+//     unhideOrderForm();
+// }
+
 
 window.addEventListener("load", function () {
     document.querySelector("#order-form").addEventListener("submit", handleOrderFormSubmission);
     document.querySelector("#receipt-button").addEventListener("click", handleReceiptButtonClick);
     document.querySelector("#go-back").addEventListener("click", handleOrderFormSubmission);
     document.querySelector("#go-back").addEventListener("click", unhideOrderForm);
+    // document.querySelector("#add-pizza-button").addEventListener("click", handleAddPizzaButtonClick);
 });
