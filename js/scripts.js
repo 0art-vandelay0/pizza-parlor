@@ -72,7 +72,6 @@ window.addEventListener("load", function() {
         let totalPizzaPrice = pizza.totalPizzaPrice();
         // console.log(totalPizzaPrice);
         // append totalPizzaPrice to to a new div with order output
-
         let totalOutput = document.getElementById("total-output");
         let sizeOutput = document.getElementById("size-output");
         let toppingsOutput = document.getElementById("toppings-output");
@@ -82,6 +81,7 @@ window.addEventListener("load", function() {
         sizeOutput.append("Size: " + pizza.size.toUpperCase());
         toppingsOutput.innerHTML = "";
         toppingsOutput.append("Toppings: " + pizza.toppings.join(" + "));
+        document.getElementById("order-output").removeAttribute("class");
 
     });
 });

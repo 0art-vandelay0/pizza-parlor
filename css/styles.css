@@ -6,6 +6,9 @@ body {
     margin: 0;
 }
 
+.hidden {
+    display: none;
+}
 
 h1 {
     font-size: 40px;
