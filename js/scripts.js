@@ -59,7 +59,17 @@ Pizza.prototype.totalPizzaPrice = function() {
 // UI Logic
 
 window.addEventListener("load", function() {
-    document.querySelector("#pizza-form").addEventListener("submit", function(event) {
+    document.querySelector("#order-form").addEventListener("submit", function(event) {
         event.preventDefault();
+
+        const checkboxes = document.querySelectorAll('input[name="topping"]:checked');
+        const selectedToppings = [];
+
+        checkboxes.forEach(function(checkbox) {
+            selectedToppings.push(checkbox.value);
+        });
+        const pizza = new Pizza(document.querySelector("#size").value, selectedToppings);
+        const totalPizzaPrice = pizza.totalPizzaPrice();
+        console.log(totalPizzaPrice);
     });
 });

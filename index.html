@@ -25,29 +25,35 @@
         <form id="order-form">
             <h3>Size:</h3>
             <div id="size-div">
-                <select id="size" required></select>
+                <select id="size" required>
+                    <option value="small">Small: 12"</option>
+                    <option value="medium">Medium: 14"</option>
+                    <option value="large">Large: 16"</option>
+                    <option value="xlarge">Extra Large: 18"</option>
+                </select>
             </div>
             <br>
             <h3>Toppings:</h3>
             <div id="toppings">
                 <div id="meats">
                     <label for="meats">Meats:</label><br>
-                    <input type="checkbox" name="topping" value="Pepperoni">Pepperoni<br>
-                    <input type="checkbox" name="topping" value="Bacon">Canadian Bacon<br>
-                    <input type="checkbox" name="topping" value="Sausage">Sausage<br>
+                    <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
+                    <input type="checkbox" name="topping" value="canadian bacon">Canadian Bacon<br>
+                    <input type="checkbox" name="topping" value="sausage">Sausage<br>
                 </div>
                 <div id="veggies">
                     <label for="veggies">Meats:</label><br>
-                    <input type="checkbox" name="topping" value="Mushrooms">Mushrooms<br>
-                    <input type="checkbox" name="topping" value="Olives">Olives<br>
-                    <input type="checkbox" name="topping" value="Onions">Onions<br>
-                    <input type="checkbox" name="topping" value="Green Peppers">Green Peppers<br>
+                    <input type="checkbox" name="topping" value="mushrooms">Mushrooms<br>
+                    <input type="checkbox" name="topping" value="olives">Olives<br>
+                    <input type="checkbox" name="topping" value="onions">Onions<br>
+                    <input type="checkbox" name="topping" value="green peppers">Green Peppers<br>
                 </div>
                 <div id="other">
                     <label for="meats">Other Toppings:</label><br>
-                    <input type="checkbox" name="topping" value="Pineapple">Pineapple<br>
-                    <input type="checkbox" name="topping" value="Spinach">Extra Cheese<br>
+                    <input type="checkbox" name="topping" value="pineapple">Pineapple<br>
+                    <input type="checkbox" name="topping" value="extra cheese">Extra Cheese<br>
                 </div>
+                <button type="submit">Submit Order</button>
             </div>
         </form>
     </div>
