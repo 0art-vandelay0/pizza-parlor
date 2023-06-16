@@ -4,6 +4,8 @@
 
 #### A website that allows the user to build a pizza and checkout with the total price.
 
+#### ...._everything is purple_
+
 ## Technologies Used
 
 - JavaScript
