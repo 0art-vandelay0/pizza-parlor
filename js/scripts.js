@@ -50,5 +50,5 @@ Pizza.prototype.totalPizzaPrice = function() {
     return totalPizzaPrice;
 }
 
-let pizza1 = new Pizza("medium", "extra cheese");
-console.log(pizza1.totalPizzaPrice());
+let pizza = new Pizza("medium", "extra cheese");
+console.log(pizza.toppingPrice());

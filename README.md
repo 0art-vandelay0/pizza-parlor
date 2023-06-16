@@ -51,7 +51,7 @@ Describe Pizza.prototype.price()
    Expected Output:<br>
    10<br>
 
-2. Test: "It will return base cost for a large and xlarge pizza."<br>
+2. Test: "It will return base costs for a large and xlarge pizza."<br>
    Code:<br>
    let pizza1 = new Pizza("large", "pepperoni");<br>
    console.log(pizza1.price());<br>
@@ -61,6 +61,15 @@ Describe Pizza.prototype.price()
    20<br>
    25<br>
 
+Describe Pizza.prototype.toppingPrice
+
+1. Test: "It will return cost for a topping"<br>
+   Code:<br>
+   let pizza = new Pizza("medium", "extra cheese");
+   console.log(pizza.toppingPrice());
+   Expected Output:<br>
+   3<br>
+
 Describe Pizza.prototype.totalPizzaPrice()
 
 1. Test "It will return the total price of the pizza (size + topping)"<br>
@@ -69,6 +78,16 @@ Describe Pizza.prototype.totalPizzaPrice()
    console.log(pizza1.totalPizzaPrice());<br>
    Expected Output:<br>
    18<br>
+
+2. Test "It will return the total price of the pizza with more than one topping (size + toppings)"<br>
+   Code:<br>
+   let pizza1 = new Pizza("medium", ["extra cheese", "pepperoni"]);<br>
+   console.log(pizza1.totalPizzaPrice());<br>
+   let pizza2 = new Pizza("medium", ["extra cheese", "pepperoni", "sausage"]);<br>
+   console.log(pizza2.totalPizzaPrice());<br>
+   Expected Output:<br>
+   20<br>
+   23<br>
 
 ## License
 
