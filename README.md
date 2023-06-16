@@ -108,7 +108,7 @@ Enter the size of pizza you want along with any and all toppings you want to add
 
 Please contact caseyfhill1@gmail.com with any the following:
 
-- Found bugs &#x1F41E
+- Found bugs &#x1F41E;
 - Alterations and improvements
 - General Questions
 - Any contributions you would like to make! &#x1F5DD;
