@@ -1,20 +1,3 @@
-// Business Logic for Order()
-function Order() {
-    this.pizzas = [];
-}
-
-Order.prototype.addPizza = function (pizza) {
-    this.pizzas.push(pizza);
-};
-
-Order.prototype.getTotalPrice = function () {
-    let totalOrderPrice = 0;
-    for (let i = 0; i < this.pizzas.length; i++) {
-        totalOrderPrice += this.pizzas[i].totalPizzaPrice();
-    }
-    return totalOrderPrice;
-};
-
 // Business Logic for Pizza()
 
 function Pizza(size, toppings) {
@@ -126,10 +109,16 @@ function handleReceiptButtonClick(event) {
     document.getElementById("order").setAttribute("class", "hidden");
     document.getElementById("receipt-button").setAttribute("class", "hidden");
     document.getElementById("go-back").setAttribute("class", "hidden");
+
     let thankYou = document.createElement("p")
     thankYou.innerHTML = " &#x1F355; ----- Thank you for your order! ------ &#x1F355; ";
     document.getElementById("order-output").append(thankYou);
     thankYou.setAttribute("class", "thank-you rainbow-text");
+    
+    let youOweUs = document.createElement("p");
+    youOweUs.innerHTML = "You owe us: $" + document.getElementById("total-output").innerHTML.slice(8) + "";
+    document.getElementById("order-output").append(youOweUs);
+    youOweUs.setAttribute("class", "message large-font");
 }
 
 function unhideOrderForm() {

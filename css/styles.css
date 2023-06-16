@@ -136,3 +136,16 @@ input {
 .rainbow-text {
     animation: rainbow 7s linear infinite;
 }
+
+@keyframes scale {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.message {
+    animation: scale 0.5s ease-in-out;
+}
+
+.large-font {
+    font-size: 20px;
+}
