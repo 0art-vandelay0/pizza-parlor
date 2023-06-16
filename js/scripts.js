@@ -36,9 +36,9 @@ Pizza.prototype.toppingPrice = function() {
         } else if (topping === "green peppers") {
             toppingPrice += 2;
         } else if (topping === "pineapple") {
-            toppingPrice += 3;
+            toppingPrice += 2;
         } else if (topping === "extra cheese") {
-            toppingPrice += 3;
+            toppingPrice += 2;
         } else {
             toppingPrice += 0;
         };
@@ -74,6 +74,7 @@ window.addEventListener("load", function() {
         // append totalPizzaPrice to to a new div with order output
 
         let totalOutput = document.getElementById("total-output");
+        totalOutput.innerHTML = "";
         totalOutput.append(totalPizzaPrice);
     });
 });
