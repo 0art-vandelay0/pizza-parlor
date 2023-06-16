@@ -53,5 +53,13 @@ Pizza.prototype.totalPizzaPrice = function() {
     return totalPizzaPrice;
 }
 
-let pizza = new Pizza("medium", ["extra cheese", "pepperoni", "sausage"]);
-console.log(pizza.toppingPrice());
+// let pizza = new Pizza("xlarge", ["extra cheese", "pepperoni", "sausage"]);
+// console.log(pizza.totalPizzaPrice());
+
+// UI Logic
+
+window.addEventListener("load", function() {
+    document.querySelector("#pizza-form").onsubmit = function(event) {
+    event.preventDefault();
+    };
+});
