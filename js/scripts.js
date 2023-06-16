@@ -40,21 +40,33 @@ Pizza.prototype.toppingPrice = function() {
     let toppingPrice = 0;
     for (let i = 0; i < this.toppings.length; i++) {
         let topping = this.toppings[i];
-        if (topping === "pepperoni") {
+        if (topping === "purple pepperoni") {
             toppingPrice += 3;
-        } else if (topping === "canadian bacon") {
+        } else if (topping === "purple ham") {
             toppingPrice += 3;
-        } else if (topping === "sausage") {
+        } else if (topping === "purple sausage") {
             toppingPrice += 3;
-        } else if (topping === "mushrooms") {
+        } else if (topping === "purple mushrooms") {
             toppingPrice += 2;
-        } else if (topping === "olives") {
+        } else if (topping === "kalamata olives") {
             toppingPrice += 2;
-        } else if (topping === "onions") {
+        } else if (topping === "purple onions") {
             toppingPrice += 2;
-        } else if (topping === "green peppers") {
+        } else if (topping === "purple peppers") {
             toppingPrice += 2;
-        } else if (topping === "pineapple") {
+        } else if (topping === "purple potatoes") {
+            toppingPrice += 2;
+        } else if (topping === "purple cabbage") {
+            toppingPrice += 2;
+        } else if (topping === "purple corn") {
+            toppingPrice += 2;
+        } else if (topping === "purple carrot") {
+            toppingPrice += 2;
+        } else if (topping === "purple plum") {
+            toppingPrice += 2;
+        } else if (topping === "purple kale") {
+            toppingPrice += 2;
+        } else if (topping === "purple pineapple") {
             toppingPrice += 2;
         } else if (topping === "extra cheese") {
             toppingPrice += 2;
