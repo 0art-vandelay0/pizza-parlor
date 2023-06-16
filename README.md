@@ -37,10 +37,7 @@ Describe: Pizza()
 
 1. Test: "It will hold a pizza object with size and toppings as properties"<br>
    Code:<br>
-   const size = "small";<br>
-   const toppings = ["pepperoni", "cheese"];<br>
-   const pizza1 = new Pizza(size, toppings);<br>
-   console.log(pizza1);<br>
+   const pizza1 = new Pizza("small", "cheese");<br>
    Pizza(pizza1)<br>
    Expected Output:<br>
    [Pizza { size: 'small', toppings: [ 'pepperoni', 'cheese' ] }]<br>
