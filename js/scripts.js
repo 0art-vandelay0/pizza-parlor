@@ -87,13 +87,33 @@ function handleOrderFormSubmission(event) {
     document.getElementById("order-output").removeAttribute("class");
     document.getElementById("order").setAttribute("class", "hidden");
     document.getElementById("receipt-button").removeAttribute("class");
+    document.getElementById("go-back").removeAttribute("class");
 }
 
 function handleReceiptButtonClick(event) {
     event.preventDefault();
+    document.getElementById("order").setAttribute("class", "hidden");
+    document.getElementById("receipt-button").setAttribute("class", "hidden");
+    document.getElementById("go-back").setAttribute("class", "hidden");
+    let thankYou = document.createElement("p")
+    thankYou.innerHTML = " ----- Thank you for your order! ------";
+    document.getElementById("order-output").append(thankYou);
+    thankYou.setAttribute("class", "thank-you");
+
+
 }
+
+function unhideOrderForm() {
+    document.getElementById("order").removeAttribute("class");
+    document.getElementById("order-output").setAttribute("class", "hidden");
+    document.getElementById("receipt-button").setAttribute("class", "hidden");
+    document.getElementById("go-back").setAttribute("class", "hidden");
+}
+
 
 window.addEventListener("load", function () {
     document.querySelector("#order-form").addEventListener("submit", handleOrderFormSubmission);
     document.querySelector("#receipt-button").addEventListener("click", handleReceiptButtonClick);
+    document.querySelector("#go-back").addEventListener("click", handleOrderFormSubmission);
+    document.querySelector("#go-back").addEventListener("click", unhideOrderForm);
 });
