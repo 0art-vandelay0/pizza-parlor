@@ -1,3 +1,5 @@
+// Business Logic
+
 function Pizza(size, toppings) {
     this.size = size;
     this.toppings = toppings;
@@ -53,9 +55,6 @@ Pizza.prototype.totalPizzaPrice = function() {
     return totalPizzaPrice;
 }
 
-// let pizza = new Pizza("xlarge", ["extra cheese", "pepperoni", "sausage"]);
-// console.log(pizza.totalPizzaPrice());
-
 // UI Logic
 
 function getSelectedToppings() {
@@ -69,25 +68,25 @@ function getSelectedToppings() {
     return selectedToppings;
 }
 
-window.addEventListener("load", function() {
-    document.querySelector("#order-form").addEventListener("submit", function(event) {
-        event.preventDefault();
+function handleOrderFormSubmission(event) {
+    event.preventDefault();
 
-        let selectedToppings = getSelectedToppings();
-        let pizza = new Pizza(document.querySelector("#size").value, selectedToppings);
-        let totalPizzaPrice = pizza.totalPizzaPrice();
-        // console.log(totalPizzaPrice);
-        // append totalPizzaPrice to to a new div with order output
-        let totalOutput = document.getElementById("total-output");
-        let sizeOutput = document.getElementById("size-output");
-        let toppingsOutput = document.getElementById("toppings-output");
-        totalOutput.innerHTML = "";
-        totalOutput.append("Total: " + "$" + totalPizzaPrice);
-        sizeOutput.innerHTML = "";
-        sizeOutput.append("Size: " + pizza.size.toUpperCase());
-        toppingsOutput.innerHTML = "";
-        toppingsOutput.append("Toppings: " + pizza.toppings.join(" + "));
-        document.getElementById("order-output").removeAttribute("class");
+    let selectedToppings = getSelectedToppings();
+    let pizza = new Pizza(document.querySelector("#size").value, selectedToppings);
+    let totalPizzaPrice = pizza.totalPizzaPrice();
+    let totalOutput = document.getElementById("total-output");
+    let sizeOutput = document.getElementById("size-output");
+    let toppingsOutput = document.getElementById("toppings-output");
 
-    });
+    totalOutput.innerHTML = "";
+    totalOutput.append("Total: $" + totalPizzaPrice);
+    sizeOutput.innerHTML = "";
+    sizeOutput.append("Size: " + pizza.size.toUpperCase());
+    toppingsOutput.innerHTML = "";
+    toppingsOutput.append("Toppings: " + pizza.toppings.join(" + "));
+    document.getElementById("order-output").removeAttribute("class");
+}
+
+window.addEventListener("load", function () {
+    document.querySelector("#order-form").addEventListener("submit", handleOrderFormSubmission);
 });
