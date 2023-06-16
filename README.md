@@ -42,6 +42,15 @@ Describe: Pizza()
    Expected Output:<br>
    [Pizza { size: 'small', toppings: [ 'pepperoni', 'cheese' ] }]<br>
 
+Describe Pizza.prototype.price()
+
+1. Test "It will return the base cost for a small size pizza."<br>
+   Code:<br>
+   const pizza1 = new Pizza("small", "cheese");<br>
+   pizza1.price();<br>
+   Expected Output:<br>
+   10<br>
+
 ## License
 
 Please contact caseyfhill1@gmail.com with any the following:
