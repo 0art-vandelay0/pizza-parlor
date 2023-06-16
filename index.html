@@ -12,48 +12,52 @@
 <body>
     <h1 class="rainbow-text">Pizza Parlor</h1>
     <h2>Order Form</h2>
-    <p>Select a size and as many toppings as you want.</p>
-    <div id="form-div">
-        <form id="order-form">
-            <h3>Size:</h3>
-            <div id="size-div">
-                <select id="size" required>
-                    <option value="small">Small: 12"</option>
-                    <option value="medium">Medium: 14"</option>
-                    <option value="large">Large: 16"</option>
-                    <option value="xlarge">Extra Large: 18"</option>
-                </select>
-            </div>
-            <br>
-            <h3>Toppings:</h3>
-            <div id="toppings">
-                <div id="meats">
-                    <h4>Meats ($3)</h4><br>
-                    <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
-                    <input type="checkbox" name="topping" value="canadian bacon">Canadian Bacon<br>
-                    <input type="checkbox" name="topping" value="sausage">Sausage<br>
+    <div id="order" class="">
+        <p>Select a size and as many toppings as you want.</p>
+        <div id="form-div">
+            <form id="order-form">
+                <h3>Size:</h3>
+                <div id="size-div">
+                    <select id="size" required>
+                        <option value="small">Small: 12"</option>
+                        <option value="medium">Medium: 14"</option>
+                        <option value="large">Large: 16"</option>
+                        <option value="xlarge">Extra Large: 18"</option>
+                    </select>
                 </div>
-                <div id="veggies">
-                    <h4>Veggies ($2)</h4><br>
-                    <input type="checkbox" name="topping" value="mushrooms">Mushrooms<br>
-                    <input type="checkbox" name="topping" value="olives">Olives<br>
-                    <input type="checkbox" name="topping" value="onions">Onions<br>
-                    <input type="checkbox" name="topping" value="green peppers">Green Peppers<br>
+                <br>
+                <h3>Toppings:</h3>
+                <div id="toppings">
+                    <div id="meats">
+                        <h4>Meats ($3)</h4><br>
+                        <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
+                        <input type="checkbox" name="topping" value="canadian bacon">Canadian Bacon<br>
+                        <input type="checkbox" name="topping" value="sausage">Sausage<br>
+                    </div>
+                    <div id="veggies">
+                        <h4>Veggies ($2)</h4><br>
+                        <input type="checkbox" name="topping" value="mushrooms">Mushrooms<br>
+                        <input type="checkbox" name="topping" value="olives">Olives<br>
+                        <input type="checkbox" name="topping" value="onions">Onions<br>
+                        <input type="checkbox" name="topping" value="green peppers">Green Peppers<br>
+                    </div>
+                    <div id="other">
+                        <h4>Other Toppings ($2)</h4><br>
+                        <input type="checkbox" name="topping" value="pineapple">Pineapple<br>
+                        <input type="checkbox" name="topping" value="extra cheese">Extra Cheese<br>
+                    </div>
+                    <button type="submit">Submit Order</button>
                 </div>
-                <div id="other">
-                    <h4>Other Toppings ($2)</h4><br>
-                    <input type="checkbox" name="topping" value="pineapple">Pineapple<br>
-                    <input type="checkbox" name="topping" value="extra cheese">Extra Cheese<br>
-                </div>
-                <button type="submit">Submit Order</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
     <div id="order-output" class="hidden">
         <h3>Order Summary:</h3>
         <p id="size-output"></p>
         <p id="toppings-output"></p>
         <p id="total-output"></p>
+    </div>
+    <button id="receipt-button" class="hidden">Print Reciept</button>
 </body>
 
 </html>

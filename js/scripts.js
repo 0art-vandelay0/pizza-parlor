@@ -85,8 +85,15 @@ function handleOrderFormSubmission(event) {
     toppingsOutput.innerHTML = "";
     toppingsOutput.append("Toppings: " + pizza.toppings.join(" + "));
     document.getElementById("order-output").removeAttribute("class");
+    document.getElementById("order").setAttribute("class", "hidden");
+    document.getElementById("receipt-button").removeAttribute("class");
+}
+
+function handleReceiptButtonClick(event) {
+    event.preventDefault();
 }
 
 window.addEventListener("load", function () {
     document.querySelector("#order-form").addEventListener("submit", handleOrderFormSubmission);
+    document.querySelector("#receipt-button").addEventListener("click", handleReceiptButtonClick);
 });
