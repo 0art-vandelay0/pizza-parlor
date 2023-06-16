@@ -19,29 +19,32 @@ Pizza.prototype.price = function() {
 
 Pizza.prototype.toppingPrice = function() {
     let toppingPrice = 0;
-    if (this.toppings === "pepperoni") {
-        toppingPrice += 2;
-    } else if (this.toppings === "canadian bacon") {
-        toppingPrice += 3;
-    } else if (this.toppings === "sausage") {
-        toppingPrice += 3;
-    } else if (this.toppings === "mushrooms") {
-        toppingPrice += 2;
-    } else if (this.toppings === "olives") {
-        toppingPrice += 2;
-    } else if (this.toppings === "onions") {
-        toppingPrice += 2;
-    } else if (this.toppings === "green peppers") {
-        toppingPrice += 2;
-    } else if (this.toppings === "pineapple") {
-        toppingPrice += 2;
-    } else if (this.toppings === "extra cheese") {
-        toppingPrice += 3;
-    } else {
-        toppingPrice += 0;
+    for (let i = 0; i < this.toppings.length; i++) {
+        let topping = this.toppings[i];
+        if (topping === "pepperoni") {
+            toppingPrice += 2;
+        } else if (topping === "canadian bacon") {
+            toppingPrice += 3;
+        } else if (topping === "sausage") {
+            toppingPrice += 3;
+        } else if (topping === "mushrooms") {
+            toppingPrice += 2;
+        } else if (topping === "olives") {
+            toppingPrice += 2;
+        } else if (topping === "onions") {
+            toppingPrice += 2;
+        } else if (topping === "green peppers") {
+            toppingPrice += 2;
+        } else if (topping === "pineapple") {
+            toppingPrice += 2;
+        } else if (topping === "extra cheese") {
+            toppingPrice += 3;
+        } else {
+            toppingPrice += 0;
+        };
     };
-    return toppingPrice;    
-}
+    return toppingPrice;
+};
 
 Pizza.prototype.totalPizzaPrice = function() {
     let basePrice = this.price();
@@ -50,5 +53,5 @@ Pizza.prototype.totalPizzaPrice = function() {
     return totalPizzaPrice;
 }
 
-let pizza = new Pizza("medium", "extra cheese");
+let pizza = new Pizza("medium", ["extra cheese", "pepperoni", "sausage"]);
 console.log(pizza.toppingPrice());

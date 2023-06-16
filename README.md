@@ -61,7 +61,7 @@ Describe Pizza.prototype.price()
    20<br>
    25<br>
 
-Describe Pizza.prototype.toppingPrice
+Describe Pizza.prototype.toppingPrice()
 
 1. Test: "It will return cost for a topping"<br>
    Code:<br>
@@ -69,6 +69,13 @@ Describe Pizza.prototype.toppingPrice
    console.log(pizza.toppingPrice());
    Expected Output:<br>
    3<br>
+
+2. Test: "It will return the cost of multiple chosen toppings"
+   Cost:<br>
+   let pizza = new Pizza("medium", ["extra cheese", "pepperoni", "sausage"]);<br>
+   console.log(pizza.toppingPrice());<br>
+   Expected Output:<br>
+   8<br>
 
 Describe Pizza.prototype.totalPizzaPrice()
 
