@@ -98,7 +98,7 @@ function handleReceiptButtonClick(event) {
     let thankYou = document.createElement("p")
     thankYou.innerHTML = " ----- Thank you for your order! ------";
     document.getElementById("order-output").append(thankYou);
-    thankYou.setAttribute("class", "thank-you");
+    thankYou.setAttribute("class", "thank-you rainbow-text");
 
 
 }
