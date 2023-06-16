@@ -1,12 +1,12 @@
-# Pizza Parlor
+# &#x1F355; **Purple Pizza Parlor** &#x1F355;
 
-#### By Casey Hill
+#### **By Casey Hill**
 
 #### A website that allows the user to build a pizza and checkout with the total price.
 
 #### ...._everything is purple_
 
-## Technologies Used
+## **Technologies Used**
 
 - JavaScript
 - CSS
@@ -16,26 +16,26 @@
 - git
 - GitHub
 
-## Description
+## **Description**
 
 Enter the size of pizza you want along with any and all toppings you want to add. Click the "Submit Order" button and your order details will appear on the screen. If you want to change your order, click "Adjust Order" or click "Checkout" to checkout with your current total and pizza of choice.
 
-## Setup/Installation Requirements
+## **Setup/Installation Requirements**
 
-### In VS Code
+### **In VS Code**
 
 - Clone this repository to your local machine.
 - Open VS Code
 - Open the top level directory you just cloned
 - Open index.html in your Live Server extension
 
-### Directly in Browser
+### **Directly in Browser**
 
 - Clone this repository to your local machine.
 - Navigate to your browser
 - File > Open File > Choose {folder you just cloned} > open index.html
 
-## Known Bugs
+## **Known Bugs**
 
 - No known bugs :beetle:
 
