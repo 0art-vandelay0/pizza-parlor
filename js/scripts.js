@@ -17,8 +17,38 @@ Pizza.prototype.price = function() {
     return price;
 };
 
-const pizza1 = new Pizza("large", "pepperoni");
-console.log(pizza1.price());
-const pizza2 = new Pizza("xlarge", "pepperoni");
-console.log(pizza2.price())
+Pizza.prototype.toppingPrice = function() {
+    let toppingPrice = 0;
+    if (this.toppings === "pepperoni") {
+        toppingPrice += 2;
+    } else if (this.toppings === "canadian bacon") {
+        toppingPrice += 3;
+    } else if (this.toppings === "sausage") {
+        toppingPrice += 3;
+    } else if (this.toppings === "mushrooms") {
+        toppingPrice += 2;
+    } else if (this.toppings === "olives") {
+        toppingPrice += 2;
+    } else if (this.toppings === "onions") {
+        toppingPrice += 2;
+    } else if (this.toppings === "green peppers") {
+        toppingPrice += 2;
+    } else if (this.toppings === "pineapple") {
+        toppingPrice += 2;
+    } else if (this.toppings === "extra cheese") {
+        toppingPrice += 3;
+    } else {
+        toppingPrice += 0;
+    };
+    return toppingPrice;    
+}
 
+Pizza.prototype.totalPizzaPrice = function() {
+    let basePrice = this.price();
+    let toppingPrice = this.toppingPrice();
+    let totalPizzaPrice = basePrice + toppingPrice;
+    return totalPizzaPrice;
+}
+
+let pizza1 = new Pizza("medium", "extra cheese");
+console.log(pizza1.totalPizzaPrice());
