@@ -77,11 +77,11 @@ window.addEventListener("load", function() {
         let sizeOutput = document.getElementById("size-output");
         let toppingsOutput = document.getElementById("toppings-output");
         totalOutput.innerHTML = "";
-        totalOutput.append("Total: " + totalPizzaPrice);
+        totalOutput.append("Total: " + "$" + totalPizzaPrice);
         sizeOutput.innerHTML = "";
         sizeOutput.append("Size: " + pizza.size.toUpperCase());
         toppingsOutput.innerHTML = "";
-        toppingsOutput.append("Toppings: " + pizza.toppings.join(", "));
+        toppingsOutput.append("Toppings: " + pizza.toppings.join(" + "));
 
     });
 });
