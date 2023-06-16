@@ -12,18 +12,22 @@
 <body>
     <h1 class="rainbow-text">Pizza Parlor</h1>
     <div id="order" class="">
-        <h2>Pizza Order Form</h2>
-        <p>Select a size and as many toppings as you want.</p>
+        <div id="order-intro">
+            <h2>Pizza Order Form</h2>
+            <p>Select a size and as many toppings as you want.</p>
+        </div>
         <div id="form-div">
             <form id="order-form">
                 <h3>Size:</h3>
                 <div id="size-div">
-                    <select id="size" required>
-                        <option value="small">Small: 12"</option>
-                        <option value="medium">Medium: 14"</option>
-                        <option value="large">Large: 16"</option>
-                        <option value="xlarge">Extra Large: 18"</option>
-                    </select>
+                    <div id="size-select">
+                        <select id="size" required>
+                            <option value="small">Small: 12"</option>
+                            <option value="medium">Medium: 14"</option>
+                            <option value="large">Large: 16"</option>
+                            <option value="xlarge">Extra Large: 18"</option>
+                        </select>
+                    </div>
                 </div>
                 <br>
                 <h3>Toppings:</h3>

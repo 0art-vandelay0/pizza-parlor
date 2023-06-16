@@ -2,8 +2,8 @@ body {
     color: whitesmoke;
     background-color: black;
     font-family: sans-serif;
-    padding: 20px;
-    margin: 0;
+    padding: 30px;
+    margin: 10;
 }
 
 .hidden {
@@ -30,13 +30,49 @@ h2 {
 
 h3 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 h4 {
     color: #af4c98;
     font-size: 18px;
     margin-bottom: 0px;
+}
+
+#order-intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#size-div {
+    border: 3px solid #984183;
+    background-color: #b9aab0;
+    border-radius: 30px;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+select {
+    font-family: sans-serif;
+    border: none;
+    border-radius: 7px;
+    box-shadow: #984183 0px 0px 10px;
+    font-size: 18px;
+    background-color: #f6eef4;
+}
+
+#order-form {
+    border-radius: 30px;
+    text-align: center;
+    width: 80%;
+    background-color: rgb(52, 52, 52);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
 }
 
 button {
@@ -57,14 +93,12 @@ input {
 }
 
 @keyframes rainbow {
-    0% { color: red; }
-    14% { color: orange; }
-    28% { color: yellow; }
-    42% { color: green; }
-    57% { color: blue; }
+    0% { color: rgb(255, 0, 187); }
+    14% { color: rgb(205, 63, 172); }
+    28% { color: rgb(190, 106, 175); }
     71% { color: indigo; }
-    85% { color: violet; }
-    100% { color: red; }
+    85% { color: rgb(185, 100, 185); }
+    100% { color: rgb(209, 48, 160); }
 }
 
 .rainbow-text {
