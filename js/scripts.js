@@ -143,7 +143,7 @@ function handleReceiptButtonClick(event) {
     document.getElementById("receipt-button").setAttribute("class", "hidden");
     document.getElementById("go-back").setAttribute("class", "hidden");
     let thankYou = document.createElement("p")
-    thankYou.innerHTML = " ----- Thank you for your order! ------";
+    thankYou.innerHTML = " &#x1F355; ----- Thank you for your order! ------ &#x1F355; ";
     document.getElementById("order-output").append(thankYou);
     thankYou.setAttribute("class", "thank-you rainbow-text");
 }
