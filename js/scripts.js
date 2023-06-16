@@ -22,7 +22,7 @@ Pizza.prototype.toppingPrice = function() {
     for (let i = 0; i < this.toppings.length; i++) {
         let topping = this.toppings[i];
         if (topping === "pepperoni") {
-            toppingPrice += 2;
+            toppingPrice += 3;
         } else if (topping === "canadian bacon") {
             toppingPrice += 3;
         } else if (topping === "sausage") {
@@ -36,7 +36,7 @@ Pizza.prototype.toppingPrice = function() {
         } else if (topping === "green peppers") {
             toppingPrice += 2;
         } else if (topping === "pineapple") {
-            toppingPrice += 2;
+            toppingPrice += 3;
         } else if (topping === "extra cheese") {
             toppingPrice += 3;
         } else {
@@ -72,5 +72,8 @@ window.addEventListener("load", function() {
         let totalPizzaPrice = pizza.totalPizzaPrice();
         // console.log(totalPizzaPrice);
         // append totalPizzaPrice to to a new div with order output
+
+        let totalOutput = document.getElementById("total-output");
+        totalOutput.append(totalPizzaPrice);
     });
 });
