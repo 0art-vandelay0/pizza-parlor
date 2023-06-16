@@ -47,9 +47,19 @@ Describe Pizza.prototype.price()
 1. Test "It will return the base cost for a small size pizza."<br>
    Code:<br>
    const pizza1 = new Pizza("small", "cheese");<br>
-   pizza1.price();<br>
+   console.log(pizza1.price());<br>
    Expected Output:<br>
    10<br>
+
+2. Test: "It will return base cost for a large and xlarge pizza."<br>
+   Code:<br>
+   const pizza1 = new Pizza("large", "pepperoni");<br>
+   console.log(pizza1.price());<br>
+   const pizza2 = new Pizza("xlarge", "pepperoni");<br>
+   console.log(pizza2.price())<br>
+   Expected Output:<br>
+   20<br>
+   25
 
 ## License
 
