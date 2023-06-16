@@ -33,68 +33,83 @@
 
 ## **Test Cases**
 
-Describe: Pizza()
+### Describe: Pizza()
 
-1. Test: "It will hold a pizza object with size and toppings as properties"<br>
+1. **Test:** _"It will hold a pizza object with size and toppings as properties"_<br>
+   **Code:**<br>
+   &nbsp;&nbsp;&nbsp;const pizza1 = new Pizza("small", "cheese");<br>
+   &nbsp;&nbsp;&nbsp;Pizza(pizza1)<br>
+   **Expected Output:**<br>
+   &nbsp;&nbsp;&nbsp;[Pizza { size: 'small', toppings: [ 'pepperoni', 'cheese' ] }]<br>
+
+### Describe Pizza.prototype.price()
+
+1. **Test:** _"It will return the base cost for a small size pizza."_<br>
+   **Code:**<br>
+   &nbsp;&nbsp;&nbsp;let pizza1 = new Pizza("small", "cheese");<br>
+   &nbsp;&nbsp;&nbsp;console.log(pizza1.price());<br>
+   **Expected Output:**<br>
+   &nbsp;&nbsp;&nbsp;10<br>
+
+2. **Test:** _"It will return base costs for a large and xlarge pizza."_<br>
+   **Code:**<br>
+   &nbsp;&nbsp;&nbsp;let pizza1 = new Pizza("large", "pepperoni");<br>
+   &nbsp;&nbsp;&nbsp;console.log(pizza1.price());<br>
+   &nbsp;&nbsp;&nbsp;let pizza2 = new Pizza("xlarge", "pepperoni");<br>
+   &nbsp;&nbsp;&nbsp;console.log(pizza2.price())<br>
+   **Expected Output:**<br>
+   &nbsp;&nbsp;&nbsp;20<br>
+   &nbsp;&nbsp;&nbsp;25<br>
+
+### Describe Pizza.prototype.toppingPrice()
+
+1. **Test:** _"It will return cost for a topping."_<br>
+   **Code:**<br>
+   &nbsp;&nbsp;&nbsp;let pizza = new Pizza("medium", "extra cheese");
+   &nbsp;&nbsp;&nbsp;console.log(pizza.toppingPrice());
+   **Expected Output:**<br>
+   &nbsp;&nbsp;&nbsp;3<br>
+
+2. **Test:** _"It will return the cost of multiple chosen toppings"_<br>
+   **Cost:**<br>
+   &nbsp;&nbsp;&nbsp;let pizza = new Pizza("medium", ["extra cheese", "pepperoni", "sausage"]);<br>
+   &nbsp;&nbsp;&nbsp;console.log(pizza.toppingPrice());<br>
+   Expected Output:<br>
+   &nbsp;&nbsp;&nbsp;8<br>
+
+### Describe Pizza.prototype.totalPizzaPrice()
+
+1. **Test:** _"It will return the total price of the pizza (size + topping)"_<br>
    Code:<br>
-   const pizza1 = new Pizza("small", "cheese");<br>
-   Pizza(pizza1)<br>
+   &nbsp;&nbsp;&nbsp;let pizza1 = new Pizza("medium", "extra cheese");<br>
+   &nbsp;&nbsp;&nbsp;console.log(pizza1.totalPizzaPrice());<br>
+   **Expected Output:**<br>
+   &nbsp;&nbsp;&nbsp;18<br>
+
+2. **Test:** _"It will return the total price of the pizza with more than one topping (size + toppings)"_<br>
+   **Code:**<br>
+   &nbsp;&nbsp;&nbsp;let pizza1 = new Pizza("medium", ["extra cheese", "pepperoni"]);<br>
+   &nbsp;&nbsp;&nbsp;console.log(pizza1.totalPizzaPrice());<br>
+   &nbsp;&nbsp;&nbsp;let pizza2 = new Pizza("medium", ["extra cheese", "pepperoni", "sausage"]);<br>
+   &nbsp;&nbsp;&nbsp;console.log(pizza2.totalPizzaPrice());<br>
    Expected Output:<br>
-   [Pizza { size: 'small', toppings: [ 'pepperoni', 'cheese' ] }]<br>
+   &nbsp;&nbsp;&nbsp;20<br>
+   &nbsp;&nbsp;&nbsp;23<br>
 
-Describe Pizza.prototype.price()
+### Describe Order.prototype.addPizza()
 
-1. Test "It will return the base cost for a small size pizza."<br>
-   Code:<br>
-   let pizza1 = new Pizza("small", "cheese");<br>
-   console.log(pizza1.price());<br>
-   Expected Output:<br>
-   10<br>
-
-2. Test: "It will return base costs for a large and xlarge pizza."<br>
-   Code:<br>
-   let pizza1 = new Pizza("large", "pepperoni");<br>
-   console.log(pizza1.price());<br>
-   let pizza2 = new Pizza("xlarge", "pepperoni");<br>
-   console.log(pizza2.price())<br>
-   Expected Output:<br>
-   20<br>
-   25<br>
-
-Describe Pizza.prototype.toppingPrice()
-
-1. Test: "It will return cost for a topping"<br>
-   Code:<br>
-   let pizza = new Pizza("medium", "extra cheese");
-   console.log(pizza.toppingPrice());
-   Expected Output:<br>
-   3<br>
-
-2. Test: "It will return the cost of multiple chosen toppings"
-   Cost:<br>
-   let pizza = new Pizza("medium", ["extra cheese", "pepperoni", "sausage"]);<br>
-   console.log(pizza.toppingPrice());<br>
-   Expected Output:<br>
-   8<br>
-
-Describe Pizza.prototype.totalPizzaPrice()
-
-1. Test "It will return the total price of the pizza (size + topping)"<br>
-   Code:<br>
-   let pizza1 = new Pizza("medium", "extra cheese");<br>
-   console.log(pizza1.totalPizzaPrice());<br>
-   Expected Output:<br>
-   18<br>
-
-2. Test "It will return the total price of the pizza with more than one topping (size + toppings)"<br>
-   Code:<br>
-   let pizza1 = new Pizza("medium", ["extra cheese", "pepperoni"]);<br>
-   console.log(pizza1.totalPizzaPrice());<br>
-   let pizza2 = new Pizza("medium", ["extra cheese", "pepperoni", "sausage"]);<br>
-   console.log(pizza2.totalPizzaPrice());<br>
-   Expected Output:<br>
-   20<br>
-   23<br>
+1. **Test** _"It will add Pizza objects to the pizza array"_<br>
+   **Code:**<br>
+   &nbsp;&nbsp;&nbsp;let pizza1 = new Pizza("medium", ["extra cheese", "pepperoni"]);<br>
+   &nbsp;&nbsp;&nbsp;let pizza2 = new Pizza("medium", ["extra cheese", "pepperoni", "sausage"]);<br>
+   &nbsp;&nbsp;&nbsp;let order1 = new Order();<br>
+   &nbsp;&nbsp;&nbsp;order1.addPizza(pizza1)<br>
+   &nbsp;&nbsp;&nbsp;order1.addPizza(pizza2)<br>
+   &nbsp;&nbsp;&nbsp;console.log(order1);<br>
+   **Expected Output:**<br>
+   &nbsp;&nbsp;&nbsp;Order {pizzas: Array(2)}<br>
+   &nbsp;&nbsp;&nbsp;pizzas: (2) [Pizza, Pizza]<br>
+   &nbsp;&nbsp;&nbsp;[[Prototype]]: Object<br>
 
 ## License
 

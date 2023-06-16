@@ -1,4 +1,13 @@
-// Business Logic
+// Business Logic for Order()
+function Order() {
+    this.pizzas = [];
+}
+
+Order.prototype.addPizza = function (pizza) {
+    this.pizzas.push(pizza);
+};
+
+// Business Logic for Pizza()
 
 function Pizza(size, toppings) {
     this.size = size;
@@ -99,8 +108,6 @@ function handleReceiptButtonClick(event) {
     thankYou.innerHTML = " ----- Thank you for your order! ------";
     document.getElementById("order-output").append(thankYou);
     thankYou.setAttribute("class", "thank-you rainbow-text");
-
-
 }
 
 function unhideOrderForm() {
