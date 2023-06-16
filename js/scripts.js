@@ -1,3 +1,20 @@
+// Business Logic for Order()
+function Order() {
+    this.pizzas = [];
+}
+
+Order.prototype.addPizza = function (pizza) {
+    this.pizzas.push(pizza);
+};
+
+Order.prototype.getTotalPrice = function () {
+    let totalOrderPrice = 0;
+    for (let i = 0; i < this.pizzas.length; i++) {
+        totalOrderPrice += this.pizzas[i].totalPizzaPrice();
+    }
+    return totalOrderPrice;
+};
+
 // Business Logic for Pizza()
 
 function Pizza(size, toppings) {
@@ -45,7 +62,7 @@ Pizza.prototype.toppingPrice = function() {
             toppingPrice += 2;
         } else if (topping === "purple carrot") {
             toppingPrice += 2;
-        } else if (topping === "purple plum") {
+        } else if (topping === "plum") {
             toppingPrice += 2;
         } else if (topping === "purple kale") {
             toppingPrice += 2;
@@ -80,13 +97,12 @@ function getSelectedToppings() {
     return selectedToppings;
 }
 
+
 function handleOrderFormSubmission(event) {
     event.preventDefault();
 
     let selectedToppings = getSelectedToppings();
     let pizza = new Pizza(document.querySelector("#size").value, selectedToppings);
-    let order = new Order(pizza);
-    order.addPizza(pizza);
 
     let totalPizzaPrice = pizza.totalPizzaPrice();
     let totalOutput = document.getElementById("total-output");
