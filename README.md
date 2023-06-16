@@ -2,15 +2,21 @@
 
 #### By Casey Hill
 
-####
+#### A website that allows the user to build a pizza and checkout with the total price.
 
 ## Technologies Used
 
 - JavaScript
 - CSS
+  - keyframes
 - HTML
+- VS Code
+- git
+- GitHub
 
 ## Description
+
+Enter the size of pizza you want along with any and all toppings you want to add. Click the "Submit Order" button and your order details will appear on the screen. If you want to change your order, click "Adjust Order" or click "Checkout" to checkout with your current total and pizza of choice.
 
 ## Setup/Installation Requirements
 
