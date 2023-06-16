@@ -58,16 +58,22 @@ Pizza.prototype.totalPizzaPrice = function() {
 
 // UI Logic
 
+function getSelectedToppings() {
+    const checkboxes = document.querySelectorAll('input[name="topping"]:checked');
+    let selectedToppings = [];
+
+    checkboxes.forEach(function (checkbox) {
+        selectedToppings.push(checkbox.value);
+    });
+
+    return selectedToppings;
+}
+
 window.addEventListener("load", function() {
     document.querySelector("#order-form").addEventListener("submit", function(event) {
         event.preventDefault();
 
-        const checkboxes = document.querySelectorAll('input[name="topping"]:checked');
-        let selectedToppings = [];
-
-        checkboxes.forEach(function(checkbox) {
-            selectedToppings.push(checkbox.value);
-        });
+        let selectedToppings = getSelectedToppings();
         let pizza = new Pizza(document.querySelector("#size").value, selectedToppings);
         let totalPizzaPrice = pizza.totalPizzaPrice();
         // console.log(totalPizzaPrice);
