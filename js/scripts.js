@@ -63,13 +63,14 @@ window.addEventListener("load", function() {
         event.preventDefault();
 
         const checkboxes = document.querySelectorAll('input[name="topping"]:checked');
-        const selectedToppings = [];
+        let selectedToppings = [];
 
         checkboxes.forEach(function(checkbox) {
             selectedToppings.push(checkbox.value);
         });
-        const pizza = new Pizza(document.querySelector("#size").value, selectedToppings);
-        const totalPizzaPrice = pizza.totalPizzaPrice();
-        console.log(totalPizzaPrice);
+        let pizza = new Pizza(document.querySelector("#size").value, selectedToppings);
+        let totalPizzaPrice = pizza.totalPizzaPrice();
+        // console.log(totalPizzaPrice);
+        // append totalPizzaPrice to to a new div with order output
     });
 });
