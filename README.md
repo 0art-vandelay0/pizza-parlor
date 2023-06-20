@@ -100,7 +100,7 @@ Enter the size of pizza you want along with any and all toppings you want to add
    &nbsp;&nbsp;&nbsp;console.log(pizza1.totalPizzaPrice());<br>
    &nbsp;&nbsp;&nbsp;let pizza2 = new Pizza("medium", ["extra cheese", "pepperoni", "sausage"]);<br>
    &nbsp;&nbsp;&nbsp;console.log(pizza2.totalPizzaPrice());<br>
-   Expected Output:<br>
+   **Expected Output:**<br>
    &nbsp;&nbsp;&nbsp;20<br>
    &nbsp;&nbsp;&nbsp;23<br>
 
