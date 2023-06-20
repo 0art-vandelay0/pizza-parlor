@@ -82,7 +82,7 @@ Enter the size of pizza you want along with any and all toppings you want to add
    **Cost:**<br>
    &nbsp;&nbsp;&nbsp;let pizza = new Pizza("medium", ["extra cheese", "pepperoni", "sausage"]);<br>
    &nbsp;&nbsp;&nbsp;console.log(pizza.toppingPrice());<br>
-   Expected Output:<br>
+   **Expected Output:**<br>
    &nbsp;&nbsp;&nbsp;8<br>
 
 ### Describe Pizza.prototype.totalPizzaPrice()
